@@ -1,0 +1,64 @@
+---
+const socialLinks = [
+    {link: "https://www.youtube.com/channel/UCjQRLoQmMHGcc7rtvIwGk0g", iconClass: "fab fa-youtube"},
+    {link: "https://anchor.fm/young%26wifedup", iconClass: "fas fa-broadcast-tower"},
+    {link: "https://open.spotify.com/show/0XTyq6aqD5hSFvy7S8Bso6?si=-MLVcwxCTiuLR0Lt2y-NBw", iconClass: "fab fa-spotify"},
+    {link: "https://podcasts.apple.com/us/podcast/young-wifed-up/id1513411183", iconClass: "fas fa-podcast"},
+    {link: "https://www.facebook.com/groups/5430616510285530/", iconClass: "fab fa-facebook-f"},
+    {link: "https://www.instagram.com/young.andwifedup/", iconClass: "fab fa-instagram"},
+    {link: "https://www.buymeacoffee.com/youngandwifedup", iconClass: "fas fa-coffee"},
+]
+
+---
+
+  <section id="listen">
+    <div class="container">
+      <div class="block">
+        <span>Follow Us:</span>
+        <div class="icons">
+           { socialLinks.map((item) => (
+            <>
+            <a target="_blank" href={item.link}>
+          <i class={item.iconClass}></i>
+          </a>
+          </>
+           ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style lang="scss">
+
+
+// Social Media Bar
+#listen {
+  padding: 0.5rem 0;
+  background: #f6f2ef;
+  .container {
+    padding: 0 6rem;
+    display: flex;
+    justify-content: flex-end;
+    .block {
+      font-size: 1.15rem;
+      display: flex;
+      align-items: center;
+      .icons {
+        margin-left: 1rem;
+        a {
+          margin-right: 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  #listen {
+    .container {
+      padding: 0;
+      justify-content: center;
+    }
+  }
+}
+  </style>

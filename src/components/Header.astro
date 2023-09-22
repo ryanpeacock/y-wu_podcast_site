@@ -1,0 +1,24 @@
+---
+
+import { Image } from 'astro:assets';
+import mainLogo from '../images/main-logo.png'
+
+---
+
+<section id="header">
+    <div class="container">
+      <Image width={450} src={mainLogo} alt="" />
+    </div>
+  </section>
+  
+  <style lang="scss">
+    #header {
+      .container {
+        padding-top: 1rem;
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+   
+  </style>

@@ -1,0 +1,78 @@
+.container {
+  max-width: $website-width;
+  padding: 0 1.5rem;
+  margin: auto;
+  overflow: hidden;
+}
+
+.lead {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.line-break {
+  width: 80%;
+  margin: 2rem auto;
+  height: 5px;
+  background: $green;
+}
+
+// Buttons
+.btn {
+  display: inline-block;
+  // background: $light-color;
+  color: #333;
+  padding: 0.4rem 1.3rem;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-right: 0.5rem;
+  outline: none;
+  transition: all 0.2s ease-in;
+
+  &.btn-primary {
+    @include set-background($primary);
+    &:hover {
+      background: lighten($primary, 5%);
+    }
+  }
+  &.btn-green {
+    @include set-background($green);
+    &:hover {
+      background: lighten($green, 5%);
+    }
+  }
+  &.btn-blue {
+    @include set-background($blue);
+    &:hover {
+      background: lighten($blue, 5%);
+    }
+  }
+  &.btn-pink {
+    @include set-background($pink);
+    &:hover {
+      background: lighten($pink, 5%);
+    }
+  }
+  &.btn-peach {
+    @include set-background($peach);
+    &:hover {
+      background: lighten($peach, 5%);
+    }
+  }
+}
+
+.alert {
+  text-align: center;
+  padding: 1rem;
+  width: 40%;
+  margin: -2rem auto 1rem auto;
+  color: $dark-grey;
+  font-size: 1.5rem;
+  // border: 2px solid green;
+  // background: lightblue;
+}
