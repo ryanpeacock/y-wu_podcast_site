@@ -1,0 +1,33 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { parse } from "rss-to-json";
+import { createSlug } from "../../utilities/tools.js";
+
+const { page } = Astro.props;
+
+export async function getStaticPaths({ paginate }) {
+  let rss = await parse("https://anchor.fm/s/1f8af31c/podcast/rss");
+  return paginate(rss.items, { pageSize: 12 });
+}
+---
+
+<Layout title="Episodes">
+  <section class="episodes-results">
+    <h1>Pagination</h1>
+    <ul>
+      {
+        page.data.map((item) => (
+          <li>
+            <a href={`/episodes/${createSlug(item.title)}`}>
+              {item.itunes_episode}. {item.title}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+    {page.url.prev ? <a href={page.url.prev}>Previous</a> : null}
+    {page.url.next ? <a href={page.url.next}>Next</a> : null}
+  </section>
+</Layout>
+
+<style lang="scss"></style>
