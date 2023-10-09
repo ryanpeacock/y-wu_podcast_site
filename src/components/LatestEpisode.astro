@@ -1,0 +1,90 @@
+---
+import { truncateText, createSlug } from "../utilities/tools";
+import { Image } from "astro:assets";
+import ButtonLink from "./ButtonLink.astro";
+const { episode } = Astro.props;
+const episodeDescription =
+  truncateText(episode.itunes_summary, 175) +
+  `<a style="color: #b7c5c6; font-style: italic;" class="read-more" href="/episodes/${createSlug(
+    episode.title
+  )}">Read More</a>`;
+---
+
+<div class="latest-episode-card">
+  <div class="left">
+    <Image
+      alt={episode.title}
+      src={episode.itunes_image.href}
+      width={175}
+      height={175}
+    />
+    <div class="content">
+      <h3>
+        {episode.itunes_episode && `Episode ${episode.itunes_episode}. `}{
+          episode.title
+        }
+      </h3>
+      <div set:html={episodeDescription} />
+    </div>
+  </div>
+  <div class="right">
+    <ButtonLink
+      backgroundColor="#b7c5c6"
+      color=""
+      link={`/episodes/${createSlug(episode.title)}`}
+      outside={false}
+      center={true}
+    >
+      Listen Here
+    </ButtonLink>
+  </div>
+</div>
+
+<style lang="scss">
+  .latest-episode-card {
+    background-color: #f6f2ef;
+    display: flex;
+    width: 75%;
+    img {
+    }
+    border-radius: 15px;
+    box-shadow: 0px 6px 32px -8px rgba(0, 0, 0, 0.65);
+    overflow: hidden;
+    margin: 1rem 0;
+    .left {
+      display: flex;
+      align-items: center;
+      .content {
+        h3 {
+          font-size: 1.25rem;
+          margin-bottom: 1rem;
+        }
+        line-height: 1.5;
+        padding: 1rem;
+      }
+
+      flex: 80%;
+    }
+    .right {
+      padding: 0.5rem;
+      display: flex;
+      align-items: center;
+      flex: 20%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .latest-episode-card {
+      width: 100%;
+      img {
+        display: none;
+      }
+      .left {
+        .content {
+          padding: 1.5rem;
+        }
+      }
+      flex-direction: column;
+    }
+  }
+</style>

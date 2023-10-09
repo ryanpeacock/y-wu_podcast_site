@@ -1,0 +1,42 @@
+---
+const {
+  backgroundColor,
+  color,
+  link,
+  outside,
+  visible = true,
+  center = false,
+  size = "md",
+} = Astro.props;
+
+const buttonSizing = {
+  xl: "2rem",
+  lg: "1.5rem",
+  md: "1.05rem",
+  sm: ".75rem",
+};
+---
+
+<a
+  target={outside ? "_target" : ""}
+  class="btn"
+  style={{
+    backgroundColor,
+    color,
+    visibility: visible ? "visible" : "hidden",
+    margin: center ? "0 auto;" : ".25rem",
+    fontSize: buttonSizing[size],
+  }}
+  href={link}><slot /></a
+>
+
+<style lang="scss">
+  .btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 10px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+</style>

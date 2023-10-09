@@ -1,33 +1,47 @@
 ---
+export const prerender = true;
 import Layout from "../../layouts/Layout.astro";
 import { parse } from "rss-to-json";
-import { createSlug } from "../../utilities/tools.js";
+import LatestEpisode from "../../components/LatestEpisode.astro";
+import Pagination from "../../components/Pagination.astro";
 
 const { page } = Astro.props;
 
 export async function getStaticPaths({ paginate }) {
   let rss = await parse("https://anchor.fm/s/1f8af31c/podcast/rss");
-  return paginate(rss.items, { pageSize: 12 });
+  return paginate(rss.items, { pageSize: 6 });
 }
 ---
 
 <Layout title="Episodes">
-  <section class="episodes-results">
-    <h1>Pagination</h1>
-    <ul>
-      {
-        page.data.map((item) => (
-          <li>
-            <a href={`/episodes/${createSlug(item.title)}`}>
-              {item.itunes_episode}. {item.title}
-            </a>
-          </li>
-        ))
-      }
-    </ul>
-    {page.url.prev ? <a href={page.url.prev}>Previous</a> : null}
-    {page.url.next ? <a href={page.url.next}>Next</a> : null}
+  <section class="episodes-index">
+    <h2>Episode List</h2>
+    <div class="container">
+      <Pagination page={page} />
+      <div class="episodes-list">
+        {page.data.map((item) => <LatestEpisode episode={item} />)}
+      </div>
+    </div>
   </section>
 </Layout>
 
-<style lang="scss"></style>
+<style lang="scss">
+  h2 {
+    font-size: 2rem;
+    margin: 1.5rem 0;
+    text-align: center;
+    font-weight: 400;
+    font-style: italic;
+    color: #999999;
+  }
+  .episodes-index {
+    margin: 2rem 0;
+  }
+  .episodes-list {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+</style>

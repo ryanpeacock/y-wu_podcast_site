@@ -9,6 +9,15 @@ export const createSlug = (str) => {
   return slug.replace(/-+/g, "-");
 };
 
+export const truncateText = (text, limit) => {
+  if (text.length <= limit) {
+    return text;
+  } else {
+    const truncatedText = text.slice(0, limit) + " ... ";
+    return truncatedText;
+  }
+};
+
 export const getYouTubeLinks = (youtubeData) => {
   const videos = youtubeData.items.map((item) => ({
     title: item.snippet.title,
@@ -32,4 +41,18 @@ export const urlify = (text) => {
       "</a>"
     );
   });
+};
+
+export const generatePageNumbers = (currentPage, lastPage) => {
+  const pages = [];
+
+  // Show the current page and a few adjacent pages
+  for (
+    let i = Math.max(currentPage - 2, 1);
+    i <= Math.min(currentPage + 2, lastPage);
+    i++
+  ) {
+    pages.push(i);
+  }
+  return pages;
 };

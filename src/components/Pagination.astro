@@ -1,0 +1,63 @@
+---
+import { generatePageNumbers } from "../utilities/tools";
+import ButtonLink from "./ButtonLink.astro";
+const { page } = Astro.props;
+const pageLinks = generatePageNumbers(page.currentPage, page.lastPage);
+const buttonProps = {
+  backgroundColor: "#b7c5c6",
+  color: "white",
+  outside: false,
+  size: "md",
+};
+---
+
+<div class="button-group">
+  {
+    page.currentPage !== 1 && (
+      <>
+        {!pageLinks.includes(1) && (
+          <ButtonLink {...buttonProps} link={`/episodes/1`}>
+            <i class="fas fa-angle-double-left" />
+          </ButtonLink>
+        )}
+
+        <ButtonLink {...buttonProps} link={page.url.prev}>
+          <i class="fas fa-angle-left" />
+        </ButtonLink>
+      </>
+    )
+  }
+
+  {
+    pageLinks.map((item) => (
+      <ButtonLink
+        {...buttonProps}
+        backgroundColor={page.currentPage === item ? "#929e9e" : "#b7c5c6"}
+        link={`/episodes/${item}`}
+      >
+        {item}
+      </ButtonLink>
+    ))
+  }
+  {
+    page.currentPage !== page.lastPage && (
+      <>
+        <ButtonLink {...buttonProps} link={page.url.next}>
+          <i class="fas fa-angle-right" />
+        </ButtonLink>
+        <ButtonLink {...buttonProps} link={`/episodes/${page.lastPage}`}>
+          <i class="fas fa-angle-double-right" />
+        </ButtonLink>
+      </>
+    )
+  }
+</div>
+
+<style lang="scss">
+  .button-group {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+</style>

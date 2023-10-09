@@ -1,11 +1,201 @@
 ---
+import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
+
+import gabie from "../images/gab.jpg";
+import marcella from "../images/mar.jpg";
 ---
 
 <Layout title="About">
-  <main>
-    <h1>About Page</h1>
-  </main>
+  <section id="about-2">
+    <h2 class="title">About Us</h2>
+    <div class="container">
+      <div class="left">
+        <div class="name">
+          <h2>Gabie</h2>
+          <a target="_blank" href="https://www.instagram.com/gabiepeacock/"
+            ><i class="fab fa-instagram"></i></a
+          >
+        </div>
+        <Image class="img" width={290} height={290} src={gabie} alt="" />
+      </div>
+      <div class="right">
+        <p>
+          Gabie lives in the Antelope Valley with her husband Ryan. Gabie owns a
+          growing piano teaching business called Peacock Piano Studio and also
+          works as a respite care giver. In her free time, she loves to play
+          board games and the Nintendo Switch with family and friends. Gabie is
+          passionate about beauty, low waste homemaking, and her reformed faith.
+          Podcasting with her younger sister Marcella has given Gabie an outlet
+          to share the things she is passionate about with fellow young wives.
+        </p>
+      </div>
+    </div>
+  </section>
+  <section id="about-3">
+    <div class="container">
+      <div class="left">
+        <p>
+          Marcella and her husband Jed live in the greater Los Angeles desert,
+          better known as the Antelope Valley, with their infant son Seth. She
+          grew up in Southern California all of her life and now serves her
+          community as a private music instructor. Along with spending time with
+          her family and friends, Marcella's interests include homemaking,
+          writing, beauty, music and now podcasting with her older sister,
+          Gabie.
+        </p>
+      </div>
+      <div class="right">
+        <div class="name">
+          <h2>Marcella</h2>
+          <a target="_blank" href="https://www.instagram.com/marcellachatham/"
+            ><i class="fab fa-instagram"></i></a
+          >
+        </div>
+        <Image class="img" width={290} height={290} src={marcella} alt="" />
+      </div>
+    </div>
+  </section>
 </Layout>
 
-<style></style>
+<style lang="scss">
+  #about {
+    &-2 {
+      .title {
+        font-size: 2rem;
+        margin: 1.5rem 0;
+        text-align: center;
+        font-weight: 400;
+        font-style: italic;
+        color: #999999;
+      }
+      .container {
+        //   border: 2px solid green;
+        padding: 2rem 4rem;
+        display: flex;
+      }
+      .left {
+        //   border: 2px solid black;
+        flex: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .name {
+          display: flex;
+          margin-bottom: 1rem;
+        }
+        h2 {
+          font-size: 2rem;
+          margin-right: 1rem;
+        }
+        .img {
+          border-radius: 50%;
+          object-fit: cover;
+          object-position: center;
+          border: 7px solid #b7c5c6;
+          margin-bottom: 1.25rem;
+        }
+        a {
+          font-size: 2rem;
+          transition: transform 0.5s ease;
+          &:hover {
+            cursor: pointer;
+            transform: scale(1.1);
+          }
+        }
+      }
+      .right {
+        //   border: 2px solid red;
+        flex: 50%;
+        display: flex;
+        align-items: center;
+        padding-right: 3rem;
+        p {
+          line-height: 1.75;
+          font-size: 1.05rem;
+        }
+      }
+    }
+    &-3 {
+      // margin-bottom: 4rem;
+      .container {
+        //   border: 2px solid green;
+        padding: 2rem 4rem;
+        display: flex;
+      }
+      .right {
+        //   border: 2px solid black;
+        flex: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .name {
+          display: flex;
+          margin-bottom: 1rem;
+        }
+        h2 {
+          font-size: 2rem;
+          margin-right: 1rem;
+        }
+        .img {
+          border-radius: 50%;
+          border: 7px solid #b7c5c6;
+          object-position: center;
+          object-fit: cover;
+          margin-bottom: 1.25rem;
+        }
+        a {
+          font-size: 2rem;
+          transition: transform 0.5s ease;
+          &:hover {
+            cursor: pointer;
+            transform: scale(1.1);
+          }
+        }
+      }
+      .left {
+        //   border: 2px solid red;
+        flex: 50%;
+        display: flex;
+        align-items: center;
+        padding-left: 3rem;
+        p {
+          line-height: 1.75;
+          font-size: 1.05rem;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    #about {
+      &-2 {
+        margin: 0;
+        .container {
+          flex-direction: column;
+          .left {
+            .img {
+            }
+          }
+          .right {
+            flex: 1;
+            padding: 0;
+            text-align: center;
+          }
+        }
+      }
+
+      &-3 {
+        margin: 0 0 1rem 0;
+        .container {
+          flex-direction: column-reverse;
+          .left {
+            padding: 0;
+            text-align: center;
+            flex: 1;
+          }
+        }
+      }
+    }
+  }
+</style>

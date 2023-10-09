@@ -1,5 +1,5 @@
 ---
-import Header from "../components/Header.astro";
+import Header from "../components/Header.jsx";
 import Navigation from "../components/Navigation.astro";
 import SocialLinks from "../components/SocialLinks.astro";
 import Footer from "../components/Footer.astro";
@@ -27,7 +27,7 @@ const getTitle = title ? `${title} | Young & Wifed Up` : "Young & Wifed Up";
     <title>{getTitle}</title>
   </head>
   <body>
-    <Header />
+    <Header client:load />
     <Navigation />
     <SocialLinks />
     <slot />
