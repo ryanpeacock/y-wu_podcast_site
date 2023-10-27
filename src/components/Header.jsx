@@ -6,7 +6,7 @@ const mobileLinks = [
   { name: "Home", link: "/" },
   { name: "About", link: "/about" },
   { name: "Episodes", link: "/episodes/1" },
-  { name: "Contact", link: "/contact" },
+  // { name: "Contact", link: "/contact" },
 ];
 
 const Header = () => {
@@ -30,9 +30,9 @@ const Header = () => {
       >
         <i onClick={handleMenuToggle} className="close-icon fas fa-times"></i>
         <div className="menu-links">
-          {mobileLinks.map((item) => {
+          {mobileLinks.map((item, index) => {
             return (
-              <span>
+              <span key={index}>
                 <a onClick={handleClickLink} href={item.link}>
                   {item.name}
                 </a>
