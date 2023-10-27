@@ -1,12 +1,11 @@
 import { defineConfig } from "astro/config";
-import nodejs from "@astrojs/node";
+// import nodejs from "@astrojs/node";
 import react from "@astrojs/react";
+import netlify from "@astrojs/netlify/functions";
 
 // https://astro.build/config
 export default defineConfig({
   integrations: [react()],
   output: "server",
-  adapter: nodejs({
-    mode: "middleware", // or 'standalone'
-  }),
+  adapter: netlify(),
 });
