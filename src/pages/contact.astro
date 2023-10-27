@@ -3,15 +3,12 @@ import Layout from "../layouts/Layout.astro";
 
 const success = Astro.url.searchParams.get("success");
 
-console.log({ success });
-
 if (Astro.request.method === "POST") {
   try {
     const data = await Astro.request.formData();
     const name = data.get("name");
     const email = data.get("email");
     const message = data.get("message");
-    console.log({ name, email, message });
   } catch (error) {
     if (error instanceof Error) {
       console.error(error.message);

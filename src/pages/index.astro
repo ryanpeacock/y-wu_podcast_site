@@ -3,12 +3,13 @@ import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
 import LatestEpisode from "../components/LatestEpisode.astro";
 import phone from "../images/phone.jpg";
-import { parse } from "rss-to-json";
+import parse from "rss-to-json";
 import ButtonLink from "../components/ButtonLink.astro";
-import ColorCard from "../components/ColorCard.astro";
+// import ColorCard from "../components/ColorCard.astro";
+import { episodes } from "../data/episodes";
 
-let rss = await parse("https://anchor.fm/s/1f8af31c/podcast/rss");
-let episodes = rss.items.slice(0, 3);
+// let rss = await parse("https://anchor.fm/s/1f8af31c/podcast/rss");
+let episodesSlice = episodes.slice(0, 3);
 
 let plateforms = [
   {
@@ -35,7 +36,7 @@ let plateforms = [
       <!-- Latest Episodes -->
       <h2>Latest Episodes</h2>
       <div class="latest-episodes">
-        {episodes.map((episode) => <LatestEpisode episode={episode} />)}
+        {episodesSlice.map((episode) => <LatestEpisode episode={episode} />)}
       </div>
       <h2>Connect With Us</h2>
       <div class="info-squares">

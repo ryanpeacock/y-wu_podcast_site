@@ -12,14 +12,6 @@ const mobileLinks = [
 const Header = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
 
-  // useEffect(() => {
-  //   console.log("hello");
-  //   console.log(window.innerWidth());
-  //   if (window.innerWidth() > 500) {
-  //     setShowMobileMenu(false);
-  //   }
-  // }, []);
-
   const handleMenuToggle = () => {
     setShowMobileMenu(!showMobileMenu);
   };

@@ -1,14 +1,15 @@
 ---
 export const prerender = true;
 import Layout from "../../layouts/Layout.astro";
-import { parse } from "rss-to-json";
+// import parse from "rss-to-json";
 import { createSlug, getYouTubeLinks, urlify } from "../../utilities/tools";
+import { episodes } from "../../data/episodes";
 
 const { episode, description, youtubeLink } = Astro.props;
 
 export async function getStaticPaths() {
-  let rss = await parse("https://anchor.fm/s/1f8af31c/podcast/rss");
-  let episodes = rss.items;
+  // let rss = await parse("https://anchor.fm/s/1f8af31c/podcast/rss");
+  // let episodes = rss.items;
 
   const youtubeResponse = await fetch(
     `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=100&playlistId=PL88EcRLFGHtELcZsbuqPQ8RSXthz0ywoX&key=AIzaSyDagAoJ1-4MAwmI2jOyxmSBEa3RRjhrvaU`
