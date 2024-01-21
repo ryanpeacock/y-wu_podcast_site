@@ -1,5 +1,63 @@
 export const episodes = [
   {
+    id: "a456d486-84c3-41ee-81c1-6b3c0142cb05",
+    title: "Preparing to be a Wife (part 1)",
+    description:
+      "In this week's episode, Marcella and Gabie reminisce about their engagements and wedding day! The highs, lows, things they loved, and what they would've done differently. \n\nWe could not do any of this without the ongoing support of our Patreon subscribers. If you would like to become a Patron head to this link: https://www.patreon.com/youngandwifedup \n\nJoin our supportive Facebook community: https://www.facebook.com/groups/5430616510285530/?ref=share_group_link\n",
+    link: "https://podcasters.spotify.com/pod/show/young%26wifedup/episodes/Preparing-to-be-a-Wife-part-1-e2eitab",
+    author: "Gabriella Peacock & Marcella Chatham",
+    published: 1705608000000,
+    created: 1705608000000,
+    category: [],
+    enclosures: [
+      {
+        url: "https://anchor.fm/s/1f8af31c/podcast/play/81408779/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fproduction%2F2024-0-17%2F363840128-44100-2-be8f92e85e94e.mp3",
+        length: "104477288",
+        type: "audio/mpeg",
+      },
+    ],
+    itunes_summary:
+      "In this week's episode, Marcella and Gabie reminisce about their engagements and wedding day! The highs, lows, things they loved, and what they would've done differently. \n\nWe could not do any of this without the ongoing support of our Patreon subscribers. If you would like to become a Patron head to this link: https://www.patreon.com/youngandwifedup \n\nJoin our supportive Facebook community: https://www.facebook.com/groups/5430616510285530/?ref=share_group_link",
+    itunes_explicit: "No",
+    itunes_duration: "00:53:21",
+    itunes_season: 6,
+    itunes_episode: 98,
+    itunes_episodeType: "full",
+    itunes_image: {
+      href: "https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded_episode/5191999/5191999-1705517985491-2513b5ca2fa88.jpg",
+    },
+    media: {},
+  },
+  {
+    id: "867ad0ce-b6c8-4695-bacd-fa1133b17dab",
+    title: "Read More in 2024",
+    description:
+      "We hope you enjoy our Season 6 premiere episode!! We could not do any of this without the ongoing support of our Patreon subscribers. If you would like to become a Patron head to this link: patreon.com/youngandwifedup \n\nJoin our supportive Facebook community: https://www.facebook.com/groups/5430616510285530/?ref=share_group_link\n",
+    link: "https://podcasters.spotify.com/pod/show/young%26wifedup/episodes/Read-More-in-2024-e2e7fa0",
+    author: "Gabriella Peacock & Marcella Chatham",
+    published: 1704916800000,
+    created: 1704916800000,
+    category: [],
+    enclosures: [
+      {
+        url: "https://anchor.fm/s/1f8af31c/podcast/play/81033984/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fproduction%2F2024-0-9%2F362792796-44100-2-cdaffe995fa6d.mp3",
+        length: "179696722",
+        type: "audio/mpeg",
+      },
+    ],
+    itunes_summary:
+      "We hope you enjoy our Season 6 premiere episode!! We could not do any of this without the ongoing support of our Patreon subscribers. If you would like to become a Patron head to this link: patreon.com/youngandwifedup \n\nJoin our supportive Facebook community: https://www.facebook.com/groups/5430616510285530/?ref=share_group_link",
+    itunes_explicit: "No",
+    itunes_duration: "01:31:42",
+    itunes_season: 6,
+    itunes_episode: 97,
+    itunes_episodeType: "full",
+    itunes_image: {
+      href: "https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded_episode/5191999/5191999-1704823510926-6a616f7cc4ccd.jpg",
+    },
+    media: {},
+  },
+  {
     id: "1e9d67cb-3a36-4df8-94ff-3f21ecf5f2cc",
     title: "Helpmeet",
     description:
