@@ -20,8 +20,8 @@ export const episodes = [
       "This week we cover everything we have been loving this winter season! We had so much fun making this episode and we hope you enjoy. \n\nWe could not do any of this without the ongoing support of our Patreon subscribers. If you would like to become a Patron head to this link: https://www.patreon.com/youngandwifedup \n\nJoin our supportive Facebook community: https://www.facebook.com/groups/5430616510285530/?ref=share_group_link",
     itunes_explicit: "No",
     itunes_duration: "00:42:37",
-    itunes_season: 100,
-    itunes_episode: 6,
+    itunes_season: 6,
+    itunes_episode: 100,
     itunes_episodeType: "full",
     itunes_image: {
       href: "https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded_episode/5191999/5191999-1706672121553-0979a6b275fff.jpg",
