@@ -1,5 +1,63 @@
 export const episodes = [
   {
+    id: "3131eca1-0bb0-4d3b-aca5-9f2fe9f84cdb",
+    title: "Winter Favorites 2024",
+    description:
+      "This week we cover everything we have been loving this winter season! We had so much fun making this episode and we hope you enjoy. \n\nWe could not do any of this without the ongoing support of our Patreon subscribers. If you would like to become a Patron head to this link: https://www.patreon.com/youngandwifedup \n\nJoin our supportive Facebook community: https://www.facebook.com/groups/5430616510285530/?ref=share_group_link\n",
+    link: "https://podcasters.spotify.com/pod/show/young%26wifedup/episodes/Winter-Favorites-2024-e2f5mtc",
+    author: "Gabriella Peacock & Marcella Chatham",
+    published: 1706731200000,
+    created: 1706731200000,
+    category: [],
+    enclosures: [
+      {
+        url: "https://anchor.fm/s/1f8af31c/podcast/play/82024812/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fproduction%2F2024-0-31%2F365641291-44100-2-85609cde6239c.mp3",
+        length: "83471339",
+        type: "audio/mpeg",
+      },
+    ],
+    itunes_summary:
+      "This week we cover everything we have been loving this winter season! We had so much fun making this episode and we hope you enjoy. \n\nWe could not do any of this without the ongoing support of our Patreon subscribers. If you would like to become a Patron head to this link: https://www.patreon.com/youngandwifedup \n\nJoin our supportive Facebook community: https://www.facebook.com/groups/5430616510285530/?ref=share_group_link",
+    itunes_explicit: "No",
+    itunes_duration: "00:42:37",
+    itunes_season: 100,
+    itunes_episode: 6,
+    itunes_episodeType: "full",
+    itunes_image: {
+      href: "https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded_episode/5191999/5191999-1706672121553-0979a6b275fff.jpg",
+    },
+    media: {},
+  },
+  {
+    id: "3958175a-d49d-4131-a970-b78e23f40253",
+    title: "Preparing to be a Wife (part 2)",
+    description:
+      "In this week's episode, we continue our series on dating, engagement, and preparing to be a wife! This episode covers all of the practical advice we wish that we had when we were in this stage of life. \n\nWe could not do any of this without the ongoing support of our Patreon subscribers. If you would like to become a Patron head to this link: https://www.patreon.com/youngandwifedup \n\nJoin our supportive Facebook community: https://www.facebook.com/groups/5430616510285530/?ref=share_group_link\n",
+    link: "https://podcasters.spotify.com/pod/show/young%26wifedup/episodes/Preparing-to-be-a-Wife-part-2-e2er5dm",
+    author: "Gabriella Peacock & Marcella Chatham",
+    published: 1706212800000,
+    created: 1706212800000,
+    category: [],
+    enclosures: [
+      {
+        url: "https://anchor.fm/s/1f8af31c/podcast/play/81679222/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fproduction%2F2024-0-23%2F364628732-44100-2-23a53fb61faef.mp3",
+        length: "133245118",
+        type: "audio/mpeg",
+      },
+    ],
+    itunes_summary:
+      "In this week's episode, we continue our series on dating, engagement, and preparing to be a wife! This episode covers all of the practical advice we wish that we had when we were in this stage of life. \n\nWe could not do any of this without the ongoing support of our Patreon subscribers. If you would like to become a Patron head to this link: https://www.patreon.com/youngandwifedup \n\nJoin our supportive Facebook community: https://www.facebook.com/groups/5430616510285530/?ref=share_group_link",
+    itunes_explicit: "No",
+    itunes_duration: "01:08:00",
+    itunes_season: 6,
+    itunes_episode: 99,
+    itunes_episodeType: "full",
+    itunes_image: {
+      href: "https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded_episode/5191999/5191999-1706032510993-53e2176fc03f9.jpg",
+    },
+    media: {},
+  },
+  {
     id: "a456d486-84c3-41ee-81c1-6b3c0142cb05",
     title: "Preparing to be a Wife (part 1)",
     description:
