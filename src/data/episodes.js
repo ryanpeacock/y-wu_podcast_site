@@ -1,5 +1,63 @@
 export const episodes = [
   {
+    id: "145ed5c1-a7de-4098-b67e-b20dcc3ae5ab",
+    title: "Living on One Income (part 2)",
+    description:
+      "In this two part series we are joined by our husbands to discuss how we transitioned from being dual income to one income households!\n\nWe could not do any of this without the ongoing support of our Patreon subscribers. If you would like to become a Patron head to this link: https://www.patreon.com/youngandwifedup \n\nJoin our supportive Facebook community: https://www.facebook.com/groups/5430616510285530/?ref=share_group_link\n",
+    link: "https://podcasters.spotify.com/pod/show/young%26wifedup/episodes/Living-on-One-Income-part-2-e2fmsa3",
+    author: "Gabriella Peacock & Marcella Chatham",
+    published: 1708545600000,
+    created: 1708545600000,
+    category: [],
+    enclosures: [
+      {
+        url: "https://anchor.fm/s/1f8af31c/podcast/play/82587395/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fproduction%2F2024-1-12%2F367227844-44100-2-164e25465ad26.mp3",
+        length: "106740884",
+        type: "audio/mpeg",
+      },
+    ],
+    itunes_summary:
+      "In this two part series we are joined by our husbands to discuss how we transitioned from being dual income to one income households!\n\nWe could not do any of this without the ongoing support of our Patreon subscribers. If you would like to become a Patron head to this link: https://www.patreon.com/youngandwifedup \n\nJoin our supportive Facebook community: https://www.facebook.com/groups/5430616510285530/?ref=share_group_link",
+    itunes_explicit: "No",
+    itunes_duration: "00:54:29",
+    itunes_season: 6,
+    itunes_episode: 102,
+    itunes_episodeType: "full",
+    itunes_image: {
+      href: "https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded_episode/5191999/5191999-1707774774449-f7ff94ec386db.jpg",
+    },
+    media: {},
+  },
+  {
+    id: "3604ce86-af89-4fcc-9b68-37fcb758ee32",
+    title: "Living on One Income (part 1)",
+    description:
+      "In this two part series we are joined by our husbands to discuss how we transitioned from being dual income to one income households!\n\nWe could not do any of this without the ongoing support of our Patreon subscribers. If you would like to become a Patron head to this link: https://www.patreon.com/youngandwifedup \n\nJoin our supportive Facebook community: https://www.facebook.com/groups/5430616510285530/?ref=share_group_link\n",
+    link: "https://podcasters.spotify.com/pod/show/young%26wifedup/episodes/Living-on-One-Income-part-1-e2fms6t",
+    author: "Gabriella Peacock & Marcella Chatham",
+    published: 1707940800000,
+    created: 1707940800000,
+    category: [],
+    enclosures: [
+      {
+        url: "https://anchor.fm/s/1f8af31c/podcast/play/82587293/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fproduction%2F2024-1-12%2F367227172-44100-2-14821f753ee08.mp3",
+        length: "167429662",
+        type: "audio/mpeg",
+      },
+    ],
+    itunes_summary:
+      "In this two part series we are joined by our husbands to discuss how we transitioned from being dual income to one income households!\n\nWe could not do any of this without the ongoing support of our Patreon subscribers. If you would like to become a Patron head to this link: https://www.patreon.com/youngandwifedup \n\nJoin our supportive Facebook community: https://www.facebook.com/groups/5430616510285530/?ref=share_group_link",
+    itunes_explicit: "No",
+    itunes_duration: "01:25:31",
+    itunes_season: 6,
+    itunes_episode: 101,
+    itunes_episodeType: "full",
+    itunes_image: {
+      href: "https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded_episode/5191999/5191999-1707774618116-b4d8f13f10ad2.jpg",
+    },
+    media: {},
+  },
+  {
     id: "3131eca1-0bb0-4d3b-aca5-9f2fe9f84cdb",
     title: "Winter Favorites 2024",
     description:
