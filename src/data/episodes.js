@@ -1,5 +1,92 @@
 export const episodes = [
   {
+    id: "978ece69-952f-4927-aa9f-f7efe9aa5b74",
+    title: "Living Contrary to Cultural Norms - Part 1",
+    description:
+      "We could not do any of this without the ongoing support of our Patreon subscribers. If you would like to become a Patron head to this link: https://www.patreon.com/youngandwifedup \n\nJoin our supportive Facebook community: https://www.facebook.com/groups/5430616510285530/?ref=share_group_link\n",
+    link: "https://podcasters.spotify.com/pod/show/young%26wifedup/episodes/Living-Contrary-to-Cultural-Norms---Part-1-e2hd6t4",
+    author: "Gabriella Peacock & Marcella Chatham",
+    published: 1711049846000,
+    created: 1711049846000,
+    category: [],
+    enclosures: [
+      {
+        url: "https://anchor.fm/s/1f8af31c/podcast/play/84367716/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fproduction%2F2024-2-21%2F371753462-44100-2-9c6054b6ec784.mp3",
+        length: "154039684",
+        type: "audio/mpeg",
+      },
+    ],
+    itunes_summary:
+      "We could not do any of this without the ongoing support of our Patreon subscribers. If you would like to become a Patron head to this link: https://www.patreon.com/youngandwifedup \n\nJoin our supportive Facebook community: https://www.facebook.com/groups/5430616510285530/?ref=share_group_link",
+    itunes_explicit: "No",
+    itunes_duration: "01:18:47",
+    itunes_season: 6,
+    itunes_episode: 105,
+    itunes_episodeType: "full",
+    itunes_image: {
+      href: "https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded_episode/5191999/5191999-1711049722671-ac82eead1ac19.jpg",
+    },
+    media: {},
+  },
+  {
+    id: "2fdbe86a-fbaa-4aa4-8b1d-c46f7a745c48",
+    title: "Level Up Your Kitchen Skills",
+    description:
+      "In this week's episode, Gabie covers a wide range of tips and ideas for anyone who spends time in the kitchen! \n\nWe could not do any of this without the ongoing support of our Patreon subscribers. If you would like to become a Patron head to this link: https://www.patreon.com/youngandwifedup \n\nJoin our supportive Facebook community: https://www.facebook.com/groups/5430616510285530/?ref=share_group_link\n",
+    link: "https://podcasters.spotify.com/pod/show/young%26wifedup/episodes/Level-Up-Your-Kitchen-Skills-e2h0m10",
+    author: "Gabriella Peacock & Marcella Chatham",
+    published: 1710356400000,
+    created: 1710356400000,
+    category: [],
+    enclosures: [
+      {
+        url: "https://anchor.fm/s/1f8af31c/podcast/play/83957216/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fproduction%2F2024-2-13%2F370720887-44100-2-2dc17357e6c1c.mp3",
+        length: "112924030",
+        type: "audio/mpeg",
+      },
+    ],
+    itunes_summary:
+      "In this week's episode, Gabie covers a wide range of tips and ideas for anyone who spends time in the kitchen! \n\nWe could not do any of this without the ongoing support of our Patreon subscribers. If you would like to become a Patron head to this link: https://www.patreon.com/youngandwifedup \n\nJoin our supportive Facebook community: https://www.facebook.com/groups/5430616510285530/?ref=share_group_link",
+    itunes_explicit: "No",
+    itunes_duration: "00:57:21",
+    itunes_season: 6,
+    itunes_episode: 104,
+    itunes_episodeType: "full",
+    itunes_image: {
+      href: "https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded_episode/5191999/5191999-1710301356721-8c00e1d14e18d.jpg",
+    },
+    media: {},
+  },
+  {
+    id: "01405f2d-a59e-424d-9231-3fbc4833a1ed",
+    title: "Stewarding & Multiplying",
+    description:
+      "The past two episodes we covered with our husbands how we went from dual to single income households. This week we want to talk about how we as wives have a special duty in the home to steward and multiply the money that is brought in to our home.\n\nWe could not do any of this without the ongoing support of our Patreon subscribers. If you would like to become a Patron head to this link: https://www.patreon.com/youngandwifedup \n\nJoin our supportive Facebook community: https://www.facebook.com/groups/5430616510285530/?ref=share_group_link\n",
+    link: "https://podcasters.spotify.com/pod/show/young%26wifedup/episodes/Stewarding--Multiplying-e2gaete",
+    author: "Gabriella Peacock & Marcella Chatham",
+    published: 1709150400000,
+    created: 1709150400000,
+    category: [],
+    enclosures: [
+      {
+        url: "https://anchor.fm/s/1f8af31c/podcast/play/83229038/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fproduction%2F2024-1-26%2F368872207-44100-2-2b5e2417cbdd6.mp3",
+        length: "140018716",
+        type: "audio/mpeg",
+      },
+    ],
+    itunes_summary:
+      "The past two episodes we covered with our husbands how we went from dual to single income households. This week we want to talk about how we as wives have a special duty in the home to steward and multiply the money that is brought in to our home.\n\nWe could not do any of this without the ongoing support of our Patreon subscribers. If you would like to become a Patron head to this link: https://www.patreon.com/youngandwifedup \n\nJoin our supportive Facebook community: https://www.facebook.com/groups/5430616510285530/?ref=share_group_link",
+    itunes_explicit: "No",
+    itunes_duration: "01:11:30",
+    itunes_season: 6,
+    itunes_episode: 103,
+    itunes_episodeType: "full",
+    itunes_image: {
+      href: "https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded_episode/5191999/5191999-1708984722946-3c8f20ca152cf.jpg",
+    },
+    media: {},
+  },
+  {
     id: "145ed5c1-a7de-4098-b67e-b20dcc3ae5ab",
     title: "Living on One Income (part 2)",
     description:
