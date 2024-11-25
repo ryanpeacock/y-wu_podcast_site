@@ -1,15 +1,19 @@
 ---
 export const prerender = true;
 import Layout from "../../layouts/Layout.astro";
-// import parse from "rss-to-json";
-import { createSlug, getYouTubeLinks, urlify } from "../../utilities/tools";
-import { episodes } from "../../data/episodes";
+import {
+  createSlug,
+  getEpisodes,
+  getYouTubeLinks,
+  urlify,
+} from "../../utilities/tools";
 
 const { episode, description, youtubeLink } = Astro.props;
 
 export async function getStaticPaths() {
-  // let rss = await parse("https://anchor.fm/s/1f8af31c/podcast/rss");
-  // let episodes = rss.items;
+  const response = await fetch("https://anchor.fm/s/1f8af31c/podcast/rss");
+  const xmlText = await response.text();
+  let episodes = await getEpisodes(xmlText);
 
   const youtubeResponse = await fetch(
     `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=100&playlistId=PL88EcRLFGHtELcZsbuqPQ8RSXthz0ywoX&key=AIzaSyDagAoJ1-4MAwmI2jOyxmSBEa3RRjhrvaU`
@@ -21,9 +25,9 @@ export async function getStaticPaths() {
     params: { slug: createSlug(episode.title) },
     props: {
       episode,
-      description: urlify(episode.itunes_summary),
+      description: urlify(episode.description),
       youtubeLink:
-        youtubeLinks[`${episode.title} - Episode ${episode.itunes_episode}`],
+        youtubeLinks[`${episode.title} - Episode ${episode.episodeNumber}`],
     },
   }));
 }

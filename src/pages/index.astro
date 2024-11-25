@@ -1,14 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { Image } from "astro:assets";
 import LatestEpisode from "../components/LatestEpisode.astro";
-import phone from "../images/phone.jpg";
-import parse from "rss-to-json";
 import ButtonLink from "../components/ButtonLink.astro";
-// import ColorCard from "../components/ColorCard.astro";
-import { episodes } from "../data/episodes";
+import { getEpisodes } from "../utilities/tools";
 
-// let rss = await parse("https://anchor.fm/s/1f8af31c/podcast/rss");
+const response = await fetch("https://anchor.fm/s/1f8af31c/podcast/rss");
+const xmlText = await response.text();
+let episodes = await getEpisodes(xmlText);
 let episodesSlice = episodes.slice(0, 3);
 
 let plateforms = [
@@ -43,10 +41,6 @@ let plateforms = [
         <div class="facebook square">
           <div class="overlay">
             <h3>Join Our Facebook Group</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis
-              iste voluptate deleniti, molestias perferendis voluptatibus!
-            </p>
             <ButtonLink
               backgroundColor="#999999"
               color="white"
@@ -61,10 +55,6 @@ let plateforms = [
         <div class="patreon square">
           <div class="overlay">
             <h3>Support us on Patreon</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto,
-              soluta expedita. Hic modi quod amet?
-            </p>
             <ButtonLink
               backgroundColor="#999999"
               color="white"
@@ -79,10 +69,6 @@ let plateforms = [
         <div class="coffee square">
           <div class="overlay">
             <h3>Buy us a Coffee</h3>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum
-              eaque eius repudiandae consequatur non magnam.
-            </p>
             <ButtonLink
               backgroundColor="#999999"
               color="white"

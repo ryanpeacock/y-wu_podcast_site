@@ -56,3 +56,47 @@ export const generatePageNumbers = (currentPage, lastPage) => {
   }
   return pages;
 };
+
+export function cleanTitleTag(text) {
+  // Check if text is wrapped in CDATA
+  if (text.startsWith("<![CDATA[") && text.endsWith("]]>")) {
+    return text.substring(9, text.length - 3); // Remove the CDATA wrapper
+  }
+  return text; // Return text as-is if no CDATA wrapper
+}
+
+export const getEpisodes = (xmlText) => {
+  // Extract <item> blocks
+  const itemRegex = /<item>(.*?)<\/item>/gs;
+  let items = [...xmlText.matchAll(itemRegex)];
+
+  // Map through items and extract relevant data
+  const theItems = items.map((item) => {
+    const itemXml = item[1]; // Full content of the <item> block
+
+    const getTagValue = (tagName) => {
+      const match = itemXml.match(
+        new RegExp(`<${tagName}>(.*?)<\/${tagName}>`, "s")
+      );
+      return match ? match[1].trim() : null;
+    };
+
+    const getAttributeValue = (tagName, attribute) => {
+      const match = itemXml.match(
+        new RegExp(`<${tagName}[^>]*\\b${attribute}="([^"]*)"`)
+      );
+      return match ? match[1].trim() : null;
+    };
+
+    return {
+      title: cleanTitleTag(getTagValue("title")),
+      link: getTagValue("link"),
+      pubDate: getTagValue("pubDate"),
+      description: getTagValue("itunes:summary"),
+      episodeNumber: getTagValue("itunes:episode"),
+      season: getTagValue("itunes:season"),
+      image: getAttributeValue("itunes:image", "href"), // Extract itunes:image href
+    };
+  });
+  return theItems;
+};

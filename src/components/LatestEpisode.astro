@@ -4,7 +4,7 @@ import { Image } from "astro:assets";
 import ButtonLink from "./ButtonLink.astro";
 const { episode } = Astro.props;
 const episodeDescription =
-  truncateText(episode.itunes_summary, 175) +
+  truncateText(episode.description, 175) +
   `<a style="color: #b7c5c6; font-style: italic;" class="read-more" href="/episodes/${createSlug(
     episode.title
   )}">Read More</a>`;
@@ -12,15 +12,10 @@ const episodeDescription =
 
 <div class="latest-episode-card">
   <div class="left">
-    <Image
-      alt={episode.title}
-      src={episode.itunes_image.href}
-      width={175}
-      height={175}
-    />
+    <Image alt={episode.title} src={episode?.image} width={180} height={180} />
     <div class="content">
       <h3>
-        {episode.itunes_episode && `Episode ${episode.itunes_episode}. `}{
+        {episode.episodeNumber && `Episode ${episode.episodeNumber}. `}{
           episode.title
         }
       </h3>

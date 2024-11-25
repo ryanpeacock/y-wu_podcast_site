@@ -1,14 +1,15 @@
 ---
 export const prerender = true;
 import Layout from "../../layouts/Layout.astro";
-// import parse from "rss-to-json";
 import LatestEpisode from "../../components/LatestEpisode.astro";
 import Pagination from "../../components/Pagination.astro";
-import { episodes } from "../../data/episodes";
+import { getEpisodes } from "../../utilities/tools";
 
 const { page } = Astro.props;
 export async function getStaticPaths({ paginate }) {
-  // let rss = await parse("https://anchor.fm/s/1f8af31c/podcast/rss");
+  const response = await fetch("https://anchor.fm/s/1f8af31c/podcast/rss");
+  const xmlText = await response.text();
+  let episodes = await getEpisodes(xmlText);
   return paginate(episodes, { pageSize: 6 });
 }
 ---
