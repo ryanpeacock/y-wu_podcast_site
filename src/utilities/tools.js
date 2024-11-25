@@ -57,7 +57,7 @@ export const generatePageNumbers = (currentPage, lastPage) => {
   return pages;
 };
 
-export function cleanTitleTag(text) {
+export function removeCDATA(text) {
   // Check if text is wrapped in CDATA
   if (text.startsWith("<![CDATA[") && text.endsWith("]]>")) {
     return text.substring(9, text.length - 3); // Remove the CDATA wrapper
@@ -89,10 +89,10 @@ export const getEpisodes = (xmlText) => {
     };
 
     return {
-      title: cleanTitleTag(getTagValue("title")),
+      title: removeCDATA(getTagValue("title")),
       link: getTagValue("link"),
       pubDate: getTagValue("pubDate"),
-      description: getTagValue("itunes:summary"),
+      description: removeCDATA(getTagValue("description")),
       episodeNumber: getTagValue("itunes:episode"),
       season: getTagValue("itunes:season"),
       image: getAttributeValue("itunes:image", "href"), // Extract itunes:image href
