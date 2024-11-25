@@ -1,13 +1,15 @@
 ---
-import { truncateText, createSlug } from "../utilities/tools";
+import {
+  truncateText,
+  createSlug,
+  createEpisodeLink,
+} from "../utilities/tools";
 import { Image } from "astro:assets";
 import ButtonLink from "./ButtonLink.astro";
 const { episode } = Astro.props;
 const episodeDescription =
   truncateText(episode.description, 175) +
-  `<a style="color: #b7c5c6; font-style: italic;" class="read-more" href="/episodes/${createSlug(
-    episode.title
-  )}">Read More</a>`;
+  `<a style="color: #b7c5c6; font-style: italic;" class="read-more" href="${createEpisodeLink(episode)}">Read More</a>`;
 ---
 
 <div class="latest-episode-card">
@@ -26,7 +28,7 @@ const episodeDescription =
     <ButtonLink
       backgroundColor="#b7c5c6"
       color=""
-      link={`/episodes/${createSlug(episode.title)}`}
+      link={createEpisodeLink(episode)}
       outside={false}
       center={true}
     >

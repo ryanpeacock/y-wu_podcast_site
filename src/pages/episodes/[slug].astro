@@ -2,6 +2,7 @@
 export const prerender = true;
 import Layout from "../../layouts/Layout.astro";
 import {
+  createEpisodeLink,
   createSlug,
   getEpisodes,
   getYouTubeLinks,
@@ -22,7 +23,7 @@ export async function getStaticPaths() {
   const { youtubeLinks } = getYouTubeLinks(youtubeData);
 
   return episodes.map((episode) => ({
-    params: { slug: createSlug(episode.title) },
+    params: { slug: createEpisodeLink(episode, false) },
     props: {
       episode,
       description: urlify(episode.description),

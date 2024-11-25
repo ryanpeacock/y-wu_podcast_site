@@ -9,6 +9,15 @@ export const createSlug = (str) => {
   return slug.replace(/-+/g, "-");
 };
 
+export const createEpisodeLink = (episode, fullPath = true) => {
+  let link;
+  link = episode.episodeNumber
+    ? `${episode.episodeNumber}`
+    : `${createSlug(episode.title)}`;
+  if (fullPath) link = `/episodes/${link}`;
+  return link;
+};
+
 export const truncateText = (text, limit) => {
   if (text.length <= limit) {
     return text;
