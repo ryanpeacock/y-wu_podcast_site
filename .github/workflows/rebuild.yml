@@ -1,0 +1,26 @@
+name: Rebuild Astro Project
+
+on:
+  repository_dispatch:
+    types:
+      - rebuild-astro
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Build Astro Project
+        run: npm run build
+
+      - name: Deploy to Netlify
+        run: |
+          npm install -g netlify-cli
+          netlify deploy --prod --dir=dist --auth=$NETLIFY_AUTH_TOKEN
+    env:
+      NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
